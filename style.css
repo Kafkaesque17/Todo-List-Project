@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    background-image:  radial-gradient(circle, rgba(213,77,137,1) 0%, rgba(63,116,179,1) 100%);
+    font-family: 'Poppins', sans-serif;
+
+}
+
+li{
+    list-style-type: none;
+}
+
+header {
+    font-size: 1.5rem;
+    color: white;
+}
+
+header,form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+}
+
+form input, form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    transition: all 0.3s ease ;
+}
+
+form input:focus {
+    outline: none;
+   
+}
+
+form button {
+    color: rgba(63,116,179,1);
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+form button:hover {
+    color: white;
+    background:   rgba(63,116,179,1);
+}
+
+.todo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-list {
+    min-width: 30%;
+
+}
+
+.todo {
+    background: rgb(245, 246, 247);
+    margin: .5rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.todo button {
+    
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+ .trash-btn {
+    background: red;
+}
+
+.complete-btn {
+    background: green;
+}
+
+.todo-items {
+    padding-left: .5rem;
+}
+
+.fa-check,.fa-trash{
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotate(20deg);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.selected {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.filter-todo {
+    color: rgba(63,116,179,1);
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+
+}
+
+.selected::after {
+    content: "\25BC";
+    position: absolute;
+    top: 0%;
+    right: 0;
+    background: rgba(63,116,179,1);
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3 ease;
+}
+
+.selected:hover::after {
+    color: rgba(63,116,179,1);
+    background: white;
+}
+
+.filter-cmp{
+    display: none;
+}
+
