@@ -88,7 +88,7 @@ todos.forEach(function(todo){
   
           console.log(todo.innerText);
         }
-        
+        break;
 
       case "uncompleted":
             if(todo.classList === "completed"){
